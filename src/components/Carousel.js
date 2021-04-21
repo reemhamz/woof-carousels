@@ -15,19 +15,19 @@ const Carousel = () => {
   // if user clicks on the left button, it will jump to the view of the previous testimonial
   const goLeft = () => {
     setLeftClicked(true);
-    current === 0 ? setCurrent(-90 * (length - 1)) : setCurrent(current + 90);
+    current === 0 ? setCurrent(-100 * (length - 1)) : setCurrent(current + 100);
   };
 
   // if user clicks on the right button, it will jump to the view of the next testimonial
   const goRight = () => {
-    current === -110 * (length - 1) ? setCurrent(0) : setCurrent(current - 110);
+    current === -100 * (length - 1) ? setCurrent(0) : setCurrent(current - 100);
   };
 
   // this method allows the testimonials to scroll right (using the goRight method above) and will scroll every 2 seconds.
   const timedScroll = () => {
     setTimeout(() => {
       goRight();
-    }, 1500);
+    }, 2000);
   };
 
   // If either arrow is clicked, the carousel stops and the user will be allowed to manually scroll through instead
@@ -37,30 +37,36 @@ const Carousel = () => {
     clearTimeout(timedScroll);
   }
 
+  const addDefaultSrc = (e) => {
+    
+  };
+
   return (
     <div className="carousel">
       <h3>We Love our Customers!</h3>
       <ul>
+        
         {Testimonials.map((data) => {
           return (
             <li
               key={data.id}
               style={{
-                background: data.color,
                 transform: `translateX(${current}%)`,
               }}
             >
-              <div>
-                <img src={data.image} alt="" />
-              </div>
-              <div className="description">
-                <p>{data.description}</p>
-              </div>
-              <div className="name">
-                – <h4>{data.name}</h4>
-              </div>
-              <div className="title">
-                <span>{data.title}</span>
+              <div className="carouselCard" style={{ background: data.color }}>
+                <div className="image">
+                  <img onError={addDefaultSrc} src={data.image} alt={data.name} />
+                </div>
+                <div className="description">
+                  <p>{data.description}</p>
+                </div>
+                <div className="name">
+                  – <h4>{data.name}</h4>
+                </div>
+                <div className="title">
+                  <span>{data.title}</span>
+                </div>
               </div>
             </li>
           );

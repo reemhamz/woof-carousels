@@ -52,6 +52,9 @@ a {
 
 // Responsive fonts {
 @include max-width(450) {
+  h1 {
+    font-size: 5.5rem;
+  }
   h2 {
     font-size: 3.5rem;
   }
