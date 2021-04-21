@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;800;900&family=Roboto:wght@100;300;400;500;600;700;800&family=Shadows+Into+Light&display=swapdisplay=swap");
+
+$MontFont: "Montserrat", sans-serif;
+$RobFont: "Roboto", sans-serif;
+$ShadFont: "Shadows Into Light", cursive;
+
+h1 {
+  font-size: 7rem;
+  font-family: $ShadFont;
+  color: $limeGreen;
+  margin-bottom: 50px;
+  span {
+    color: $royalBlue;
+  }
+}
+
+h2,
+h3 {
+  margin-bottom: 20px;
+  font-family: $MontFont;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+h4 {
+    font-family: $RobFont;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+p,
+a {
+  font-size: 2rem;
+  font-family: $RobFont;
+}
+
+
+p {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: $royalBlue;
+  font-weight: 600;
+}
+
+.tealButton {
+  background-color: $teal;
+  border: 0;
+  padding: 15px;
+  font-family: $MontFont;
+  font-weight: 800;
+  font-size: 2.2rem;
+  width: 170px;
+  border-radius: 4px;
+  transition: 0.3s;
+  &:hover {
+    background-color: $royalBlue;
+    color: white;
+  }
+}
+
+.blackButton {
+  background-color: transparent;
+  border: 4px solid black;
+  padding: 11px;
+  font-family: $MontFont;
+  font-weight: 800;
+  font-size: 2.2rem;
+  width: 170px;
+  border-radius: 4px;
+  transition: 0.3s;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}

@@ -1,0 +1,24 @@
+@import "./setup.scss";
+@import "./colors.scss";
+@import "./fonts";
+@import "./header.scss";
+@import "./stats.scss";
+@import "./benefits.scss";
+@import "./carousel.scss";
+@import "./contact.scss";
+
+html {
+  background: $wheat;
+  text-align: center;
+  font-size: 62.5%;
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+header {
+  margin-bottom: 40px;
+}
+
+.about {
+  margin-bottom: 100px;
+}

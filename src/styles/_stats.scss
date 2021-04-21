@@ -1,0 +1,30 @@
+.stats {
+  display: flex;
+  justify-content: space-between;
+ margin-bottom: 100px;
+  div {
+    width: 30%;
+    .green {
+      span {
+        background: $limeGreen;
+        padding: 5px 10px;
+        border-radius: 50px;
+      }
+    }
+
+    .pink {
+      span {
+        background: $brightPink;
+        padding: 5px 10px;
+        border-radius: 50px;
+      }
+    }
+    .yellow {
+      span {
+        background: $yellow;
+        padding: 5px 10px;
+        border-radius: 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.header {
+  font-family: $MontFont;
+  font-weight: 900;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    .info {
+      text-align: left;
+      width: 45%;
+      h2 {
+        span {
+          background-color: $brightPink;
+          padding: 8px;
+          font-size: 4.5rem;
+          border-radius: 50px;
+        }
+      }
+      .buttons {
+          display: flex;
+          justify-content: flex-start;
+          margin-top: 20px;
+         .tealButton {
+             margin-right: 20px;
+         }
+      }
+    }
+  }
+  .image {
+    width: 45%;
+    img {
+      width: 100%;
+    }
+  }
+}
