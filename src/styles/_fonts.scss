@@ -29,9 +29,9 @@ h3 {
 }
 
 h4 {
-    font-family: $RobFont;
-    font-size: 2.5rem;
-    font-weight: 700;
+  font-family: $RobFont;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 p,
@@ -39,7 +39,6 @@ a {
   font-size: 2rem;
   font-family: $RobFont;
 }
-
 
 p {
   font-weight: 400;
@@ -51,16 +50,37 @@ a {
   font-weight: 600;
 }
 
-.tealButton {
-  background-color: $teal;
-  border: 0;
-  padding: 15px;
+// Responsive fonts {
+@include max-width(450) {
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+  h4 {
+    font-size:2rem;
+  }
+  p, a {
+    font-size:1.5rem;
+  }
+}
+
+// buttons that repeat throughout the page
+.repeatedButton {
   font-family: $MontFont;
   font-weight: 800;
   font-size: 2.2rem;
   width: 170px;
   border-radius: 4px;
   transition: 0.3s;
+}
+
+.tealButton {
+  background-color: $teal;
+  border: 0;
+  padding: 15px;
+
   &:hover {
     background-color: $royalBlue;
     color: white;
@@ -71,12 +91,6 @@ a {
   background-color: transparent;
   border: 4px solid black;
   padding: 11px;
-  font-family: $MontFont;
-  font-weight: 800;
-  font-size: 2.2rem;
-  width: 170px;
-  border-radius: 4px;
-  transition: 0.3s;
   &:hover {
     background-color: black;
     color: white;

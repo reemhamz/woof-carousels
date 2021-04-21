@@ -10,8 +10,8 @@ const Contact = () => {
         about all the tools you need to grow your center!
       </p>
       <div className="buttons">
-        <button className="tealButton">Start Now</button>
-        <button className="blackButton">Get Quote</button>
+        <button className="tealButton repeatedButton">Start Now</button>
+        <button className="blackButton repeatedButton">Get Quote</button>
       </div>
     </div>
   );

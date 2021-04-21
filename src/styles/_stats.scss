@@ -1,9 +1,10 @@
 .stats {
   display: flex;
   justify-content: space-between;
- margin-bottom: 100px;
+      flex-wrap: wrap;
+  margin-bottom: 100px;
   div {
-    width: 30%;
+    width: 33%;
     .green {
       span {
         background: $limeGreen;
@@ -11,7 +12,6 @@
         border-radius: 50px;
       }
     }
-
     .pink {
       span {
         background: $brightPink;
@@ -25,6 +25,20 @@
         padding: 5px 10px;
         border-radius: 50px;
       }
+    }
+  }
+}
+
+
+// responsive CSS 
+@include max-width(1060){
+  .stats {
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+    div {
+      width: 100%;
+      margin-top: 30px ;
     }
   }
 }

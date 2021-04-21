@@ -13,24 +13,55 @@
         span {
           background-color: $brightPink;
           padding: 8px;
-          font-size: 4.5rem;
           border-radius: 50px;
         }
       }
       .buttons {
-          display: flex;
-          justify-content: flex-start;
-          margin-top: 20px;
-         .tealButton {
-             margin-right: 20px;
-         }
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 20px;
+        .tealButton {
+          margin-right: 20px;
+        }
+      }
+    }
+    .image {
+      width: 45%;
+      img {
+        width: 100%;
       }
     }
   }
-  .image {
-    width: 45%;
-    img {
-      width: 100%;
+}
+
+// Responsive CSS
+
+.header {
+  .wrapper {
+
+    @include max-width(890) {
+      flex-direction: column;
+      .info {
+        width: 100%;
+        margin-bottom: 30px;
+        .buttons {
+          justify-content: space-evenly;
+        }
+      }
+      .image {
+        width: 80%;
+        align-self: center;
+      }
     }
-  }
+    
+    @include max-width(400) {
+      .buttons {
+        flex-direction: column;
+        button {
+          width: 100%;
+          margin-top: 20px;
+        }
+      }
+      }
+    }
 }

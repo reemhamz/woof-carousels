@@ -5,9 +5,9 @@ const Header = () => {
   return (
     <header className="header">
       <h1>
-        🐩Woof
+        Woof
         <span>Mama</span>
-        🐕
+        
       </h1>
       <div className="wrapper">
         <div className="info">
@@ -20,8 +20,8 @@ const Header = () => {
             boof what a nice floof.
           </p>
           <div className="buttons">
-            <button className="tealButton">Start now</button>
-            <button className="blackButton">Get Quote</button>
+            <button className="tealButton repeatedButton" id="button">Start now</button>
+            <button className="blackButton repeatedButton" id="button">Get Quote</button>
           </div>
         </div>
         <div className="image">

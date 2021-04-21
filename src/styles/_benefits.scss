@@ -1,7 +1,7 @@
 .benefits {
-    display: flex;
-    align-items: center;
-    margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
   .info {
     width: 60%;
     text-align: left;
@@ -10,6 +10,7 @@
       display: flex;
       justify-content: space-between;
       margin-top: 20px;
+      flex-wrap: wrap;
       .card {
         width: 30%;
         height: 250px;
@@ -29,7 +30,7 @@
           color: black;
         }
         &:hover {
-            transform: scale(1.05);
+          transform: scale(1.05);
         }
       }
       .pink {
@@ -41,14 +42,42 @@
       }
 
       .yellow {
-        background: yellow;
+        background: $yellow;
       }
     }
   }
   .image {
-      width: 40%;
-      img {
-          width: 100%;
+    width: 40%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+.benefits {
+  @include max-width(1190) {
+    flex-direction: column;
+    .info {
+      width: 100%;
+    }
+    .image {
+      width: 80%;
+    }
+  }
+  @include max-width(750) {
+    .info {
+      padding: 0;
+      .cards {
+        justify-content: center;
+        .card {
+          width: 40%;
+          margin: 20px;
+          @include max-width(490) {
+            width: 100%;
+          }
+        }
       }
+    }
   }
 }

@@ -1,7 +1,9 @@
 @import "./setup.scss";
+@import "./breakpoints.scss";
 @import "./colors.scss";
 @import "./fonts";
 @import "./header.scss";
+@import "./about.scss";
 @import "./stats.scss";
 @import "./benefits.scss";
 @import "./carousel.scss";
@@ -14,11 +16,8 @@ html {
   width: 85%;
   margin: 0 auto;
   max-width: 1080px;
-}
-header {
-  margin-bottom: 40px;
+  @include max-width(850){
+    width: 95%;
+  }
 }
 
-.about {
-  margin-bottom: 100px;
-}

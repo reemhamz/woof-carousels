@@ -77,7 +77,7 @@
     transition: 0.2s background;
     border-radius: 5px;
     &:hover {
-         background: rgba(black, 0.1);
+      background: rgba(black, 0.1);
     }
   }
 }
@@ -88,4 +88,34 @@
 
 #rightButton {
   right: 0;
+}
+
+// responsive CSS
+
+.carousel {
+  @include max-width(760) {
+    ul {
+      align-items: flex-start;
+      li {
+        min-width: 70%;
+        .description {
+          p {
+            font-size: 1.8rem;
+          }
+          @include max-width(460) {
+            p {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        @include max-width(590) {
+          margin: 10px;
+          min-width: 80%;
+          .description {
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
 }

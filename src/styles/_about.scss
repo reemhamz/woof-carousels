@@ -1,0 +1,10 @@
+
+.about {
+  margin-bottom: 100px;
+  p{
+    text-align: left;
+  }
+  @include max-width(850){
+    margin-bottom: 50px;
+  }
+}
